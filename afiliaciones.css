@@ -1,0 +1,77 @@
+
+
+@media screen and (max-width:900px) {
+    .nav-links{
+        display: none;
+    }
+}
+
+
+.formulario{
+    margin-left: 280px;
+    margin-top: 50px;
+	width: 500px;
+	padding: 80px;
+}
+.title{
+	margin-bottom: 10px;
+	font-size: 12px;
+    text-align: center;
+}
+.entrada_datos input{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+    padding: -16px 12px;
+}
+
+#submit{
+	border: none;
+	background-color: rgb(247, 247, 247);
+	color: rgb(8, 7, 7);
+	width: 200px;
+	margin-top: 10px;
+	border-radius: 50px;
+}
+#submit:hover{
+	background-color: #be92e7;
+}
+
+.formulario{
+  background-color: #45b4d6c9 !important;
+  border-radius: 10px;
+  padding: 15px 40px;
+}
+
+h2{
+  color:#322054;
+  font-weight: 300;
+}
+
+
+.boton_enviar{
+    font-size: 15px;
+    color: #fff;
+    border: 0;
+    border-radius: 100px;
+    background-color: #322054;
+    padding: 15px 35px;
+    cursor: pointer;
+}
+.loadingspinner {
+    margin: 0 auto;
+    pointer-events: none;
+    width: 2.5em;
+    height: 2.5em;
+    border: 0.4em solid transparent;
+    border-color: #eee;
+    border-top-color: #3E67EC;
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+  }
+
+  @keyframes loadingspin {
+    100% {
+        transform: rotate(360deg)
+    }
+  }
