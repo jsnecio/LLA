@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibertadAvanza| Rio Cuarto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/propuestas.css">
+    
+    <!--FAVICOM-->
+    <link rel="shortcut icon" type="img/png" href="/src/img/favicon-96x96.png"/>
+</head>
+<body>
+
+  <!-- Ir arriba -->
+  <div class="go-top">
+    <span><i class="fas fa-angle-up"></i></span>
+  </div>
+
+  
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a href="index.html"><img src="img/llariocuartosn1.png" height="60" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="afiliaciones.html">Afiliaciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Propuestas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                         
+                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                          
+                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                          
+                <a class="nav-link" href="#"><i class="fab fa-"></i></a>
+  
+                <a class="nav-link" href="#"><i class="fas fa-mobile-alt"></i></a>
+                          
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- PROPUESTAS -->
+    <div class="formulario" id="propuestas">
+        <div class="title">
+            <h2 class="text-center mt-3">DEJANOS TU PROPUESTA PARA LA CIUDAD<hr></h2>
+        </div>
+    
+        <div class="col-md-5">
+            <form id="my-google-sheet">
+                <div class="entrada_datos">
+                  <label for="Nombre">Nombre:</label>
+                    <input type="text" name="Nombre" rows="10" class="form-control" required>
+                </div>
+                <div class="entrada_datos">
+                  <label for="Apellido">Apellido:</label>
+                  <input type="text" name="Apellido" rows="10" class="form-control" required>
+              </div>
+                <div class="entrada_datos">
+                  <label for="Celular">Numero de Celular:</label>
+                    <input type="number" rows="10" name="Celular" class="form-control" required>
+                </div>
+                <div class="entrada_datos">
+                  <label for="Propuesta">Propuesta:</label>
+                  <textarea name="Propuesta" rows="10" placeholder="Escribe aqui tu Propuesta" class="form-control" required></textarea>
+              </div>
+            </form>
+            <div class="form-group_enviar">
+              <button onclick="SendFormGoogleSheets()" class="boton_enviar">Enviar Propuesta</button>
+          </div>
+      </div>
+    
+      </div>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="assets/js/material.min.js"></script>
+        <script>
+          function SendFormGoogleSheets (){
+            $.ajax({
+              url:'https://script.google.com/macros/s/AKfycbz1sKWEvYl4k7H9WE2MChQaQFheXUdv7SdH9ctiuRrmXH7bUIC-x74vQTEguSLVFtYA/exec',
+              type:'post',
+              data:$("#my-google-sheet").serializeArray(),
+              success: function(){
+                alert("Registro exitoso")
+              },
+              error: function(){
+                alert("Error en el Registro :(")
+              }
+          });
+        }
+        </script>
+        
+        
+        <footer>
+            <div class="container p-3">
+              <div class="row text-center text-white">
+                <div class="col ml-auto">
+                  <p>LibertadAvanza Rio cuarto | Copyright &copy; 2024</p>
+                </div>
+              </div>
+            </div>       
+          </footer>
+      
+          <!-- BOOTSTRAP SCRIPTS -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        
+    
+</body>
+</html>
